@@ -13,6 +13,8 @@
 ## Wiring Up Components
 Follow the wiring diagram included in the repository to place your components on the bread board.
 
+![image](./20220608_151904.jpg)
+
 ## IFTTT
 After you've signed in/created an account on https://ifttt.com/explore, select "Create"
 
