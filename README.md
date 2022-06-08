@@ -1,5 +1,15 @@
 # ESP-WROOM-32 Door Alarm Project
 
+## Materials
+* ESP-WROOM-32 Dev Board
+* USB to Micro-USB cable
+* Magnetic Reed Switch
+* 3.3v Piezo Buzzer
+* 3-pin Slide Switch
+* 1x Red LED
+* 1x Blue LED
+* 1x Green LED
+
 ## Wiring Up Components
 Follow the wiring diagram included in the repository to place your components on the bread board.
 
