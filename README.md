@@ -70,7 +70,7 @@ Click the "Compile" button (check mark) at the top left of the Arduino IDE.
 Once the code has completed compilation, click the "Upload" button (right-pointing-arrow) to upload the code to the board.
 
 ## Testing & Troubleshooting
-First and foremost, watch the console adn the serial monitor for messages.
+First and foremost, watch the console and the serial monitor for messages.
 
 ### WiFi
 The first thing that you should see in the serial monitor is a message saying that the Wifi has connected. On the board, you should see the blue light (LED pin 32) flashing while it's attempting to connect, then solid illumination once it has connected.
