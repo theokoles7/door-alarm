@@ -20,8 +20,8 @@ int DOOR_STATE_PRE;                                           // Precious door s
 
 // CONFIGURABLES
 String DOOR_NAME =    "Front";                                // Name of door to be sent in notification
-char* SSID = (char*)  "";                                     // Wifi SSID
-char* PSWD = (char*)  "";                                     // Wifi Password
+char* SSID = (char*)  "SANCTUM";                              // Wifi SSID
+char* PSWD = (char*)  "Jessi712189512";                       // Wifi Password
 
 // ============================================================= SETUP
 void setup(){
@@ -40,11 +40,11 @@ void setup(){
 
 // ============================================================= CYCLE OF OPS
 void loop(){
-  while(digitalRead(PIN_SWITCH_ARM) == LOW){                 // If sensor is armed...
+  while(digitalRead(PIN_SWITCH_ARM) == LOW){                  // If sensor is armed...
     digitalWrite(PIN_LED_ARM, HIGH);                          // Turn on arming light
     DOOR_STATE_PRE = DOOR_STATE_CUR;                          // Assign current state to previous state
     DOOR_STATE_CUR = digitalRead(PIN_SWITCH_REED);            // Read new current state
-    digitalWrite(PIN_LED_WIFI, WiFi.status() == WL_CONNECTED);  // Maintain communication of Wifi status
+    digitalWrite(PIN_LED_WIFI, WiFi.status() == WL_CONNECTED);// Maintain communication of Wifi status
 
     if(DOOR_STATE_CUR == HIGH && DOOR_STATE_PRE == LOW){      // If door was just opened...
       soundAlarm();                                           // Sound the alarm
@@ -85,7 +85,7 @@ void soundAlarm(){
     digitalWrite(PIN_LED_DOOR, HIGH);                         // WEE
     digitalWrite(PIN_SPEAKER, HIGH);
     delay(250);
-    digitalWrite(PIN_LED_DOOR, LOW);                           // WOO
+    digitalWrite(PIN_LED_DOOR, LOW);                          // WOO
     digitalWrite(PIN_SPEAKER, LOW);
     delay(250);
   }
@@ -99,7 +99,7 @@ void notify(String DOOR_NAME){
   http.begin(                                                 // Build request
     "http://maker.ifttt.com"                                  // URL
     "/trigger/door_open/with/key/"                            // Request
-    ""                                                        // API Key
+    "iHMMnkh_6PehIF-Yre60JJ8NtPfo_cpKS4ng1l2nR7D"             // API Key
     "/?value1=" + DOOR_NAME                                   // Value1 = <DOOR_NAME>
     );
   http.GET();                                                 // Make request
