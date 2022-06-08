@@ -63,16 +63,16 @@ Enter your Wifi's SSID and password into the appropriate fields (lines 23 & 24).
 On line 102, paste your IFTTT key in-between the quotation marks. This key is used in the HTTP GET request to trigger your applet service.
 
 ### Installing ESP32 boards
-If you've not already installed the ESP32 boards in your Arduino IDE, go to File > Preferences, paste
+If you've not already installed the ESP32 boards in your Arduino IDE: 
+* Go to File > Preferences, paste
 `https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json`
 into the "Additional Boards Manager URLs" text field, and click "OK".
-
-Go to Tools > Board > Boards Manager, search for ESP32, and click install. Once the library has finished intsalling, click "Close"
+* Go to Tools > Board > Boards Manager, search for ESP32, and click install. Once the library has finished intsalling, click "Close"
 
 ### Set up
-Go to Tools > Board > ESP32 Arduino > NodeMCU-32S
-Go to Tools > Port and select the appropriate port at which your board is connected. For Linux this will typically be `/dev/ttyUSB0` and for Windows, it can be a couple of different COM ports.
-Go to Tools and click "Serial Monitor". (Note: For Linux, if you get a permissions error, open a terminal and run `sudo chmod 777 /dev/ttyUSB0`)
+* Go to Tools > Board > ESP32 Arduino > NodeMCU-32S
+* Go to Tools > Port and select the appropriate port at which your board is connected. For Linux this will typically be `/dev/ttyUSB0` and for Windows, it can be a couple of different COM ports.
+* Go to Tools and click "Serial Monitor". (Note: For Linux, if you get a permissions error, open a terminal and run `sudo chmod 777 /dev/ttyUSB0`)
 In the serial monitor window, set the BAUD rate to 9600.
 
 ### Execution
