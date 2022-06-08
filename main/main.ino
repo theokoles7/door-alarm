@@ -40,11 +40,11 @@ void setup(){
 
 // ============================================================= CYCLE OF OPS
 void loop(){
-  while(digitalRead(PIN_SWITCH_ARM) == LOW){                 // If sensor is armed...
+  while(digitalRead(PIN_SWITCH_ARM) == LOW){                  // If sensor is armed...
     digitalWrite(PIN_LED_ARM, HIGH);                          // Turn on arming light
     DOOR_STATE_PRE = DOOR_STATE_CUR;                          // Assign current state to previous state
     DOOR_STATE_CUR = digitalRead(PIN_SWITCH_REED);            // Read new current state
-    digitalWrite(PIN_LED_WIFI, WiFi.status() == WL_CONNECTED);  // Maintain communication of Wifi status
+    digitalWrite(PIN_LED_WIFI, WiFi.status() == WL_CONNECTED);// Maintain communication of Wifi status
 
     if(DOOR_STATE_CUR == HIGH && DOOR_STATE_PRE == LOW){      // If door was just opened...
       soundAlarm();                                           // Sound the alarm
@@ -85,7 +85,7 @@ void soundAlarm(){
     digitalWrite(PIN_LED_DOOR, HIGH);                         // WEE
     digitalWrite(PIN_SPEAKER, HIGH);
     delay(250);
-    digitalWrite(PIN_LED_DOOR, LOW);                           // WOO
+    digitalWrite(PIN_LED_DOOR, LOW);                          // WOO
     digitalWrite(PIN_SPEAKER, LOW);
     delay(250);
   }
