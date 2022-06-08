@@ -20,8 +20,8 @@ int DOOR_STATE_PRE;                                           // Precious door s
 
 // CONFIGURABLES
 String DOOR_NAME =    "Front";                                // Name of door to be sent in notification
-char* SSID = (char*)  "SANCTUM";                              // Wifi SSID
-char* PSWD = (char*)  "Jessi712189512";                       // Wifi Password
+char* SSID = (char*)  "";                                     // Wifi SSID
+char* PSWD = (char*)  "";                                     // Wifi Password
 
 // ============================================================= SETUP
 void setup(){
@@ -99,7 +99,7 @@ void notify(String DOOR_NAME){
   http.begin(                                                 // Build request
     "http://maker.ifttt.com"                                  // URL
     "/trigger/door_open/with/key/"                            // Request
-    "iHMMnkh_6PehIF-Yre60JJ8NtPfo_cpKS4ng1l2nR7D"             // API Key
+    ""                                                        // API Key
     "/?value1=" + DOOR_NAME                                   // Value1 = <DOOR_NAME>
     );
   http.GET();                                                 // Make request
