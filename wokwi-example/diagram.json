@@ -3,28 +3,52 @@
   "author": "Anonymous maker",
   "editor": "wokwi",
   "parts": [
-    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -14.5, "left": 62.2, "attrs": {} },
-    { "type": "wokwi-led", "id": "led1", "top": 25.2, "left": 4.8, "attrs": { "color": "red" } },
-    { "type": "wokwi-led", "id": "led2", "top": 15.6, "left": 24, "attrs": { "color": "red" } },
-    { "type": "wokwi-slide-switch", "id": "sw1", "top": 71.6, "left": -44.9, "attrs": {} },
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -23.33, "left": 130.67, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -47.45,
+      "left": -67.79,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -13.2,
+      "left": -81.6,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 15.6,
+      "left": -100.8,
+      "attrs": { "color": "red" }
+    },
     {
       "type": "wokwi-buzzer",
       "id": "bz1",
-      "top": -53.2,
-      "left": -30,
+      "top": -43.6,
+      "left": -39.6,
       "attrs": { "volume": "0.1" }
-    }
+    },
+    { "type": "wokwi-slide-switch", "id": "sw1", "top": 4.4, "left": 41.5, "attrs": {} },
+    { "type": "wokwi-slide-switch", "id": "sw2", "top": 4.4, "left": 89.5, "attrs": {} }
   ],
   "connections": [
     [ "esp:TX0", "$serialMonitor:RX", "", [] ],
     [ "esp:RX0", "$serialMonitor:TX", "", [] ],
-    [ "led1:C", "esp:GND.2", "green", [ "v0" ] ],
-    [ "led1:A", "esp:D33", "green", [ "v0" ] ],
+    [ "led3:C", "esp:GND.2", "green", [ "v0" ] ],
     [ "led2:C", "esp:GND.2", "green", [ "v0" ] ],
-    [ "led2:A", "esp:D32", "green", [ "v0" ] ],
-    [ "sw1:2", "esp:GND.2", "green", [ "v0" ] ],
-    [ "sw1:3", "esp:D14", "green", [ "v0" ] ],
+    [ "led1:C", "esp:GND.2", "green", [ "v0" ] ],
+    [ "led3:A", "esp:D26", "green", [ "v0" ] ],
+    [ "led2:A", "esp:D33", "green", [ "v0" ] ],
+    [ "led1:A", "esp:D32", "green", [ "v0" ] ],
     [ "bz1:2", "esp:D25", "green", [ "v0" ] ],
-    [ "bz1:1", "esp:GND.2", "green", [ "v0" ] ]
+    [ "bz1:1", "esp:GND.2", "green", [ "v0" ] ],
+    [ "sw1:3", "esp:D13", "green", [ "v0" ] ],
+    [ "sw1:2", "esp:GND.2", "green", [ "v0" ] ],
+    [ "sw2:2", "esp:GND.2", "green", [ "v0" ] ],
+    [ "sw2:3", "esp:D14", "green", [ "v0" ] ]
   ]
 }
