@@ -5,34 +5,43 @@ Follow the wiring diagram included in the repository to place your components on
 
 ## IFTTT
 After you've signed in/created an account on https://ifttt.com/explore, select "Create"
+
 ![image](https://user-images.githubusercontent.com/61356329/172697535-0a2e6052-b770-4155-85f7-d2e75c30c97e.png)
 
 On the "Create your own" screen, select "Add" on the "If This" block
+
 ![image](https://user-images.githubusercontent.com/61356329/172697425-8d9ae951-a469-4497-8f44-067e7b181973.png)
 
 For "Choose a service", search and select "webhooks"
+
 ![image](https://user-images.githubusercontent.com/61356329/172697723-4e452c1f-6884-4683-bdb8-4b3f15ed21f8.png)
 
 Select "Receive a web request"
+
 ![image](https://user-images.githubusercontent.com/61356329/172697894-58457c14-c063-4d2d-93d2-cc0585c4bccf.png)
 
 Enter a name for your service and click "Create trigger"
+
 ![image](https://user-images.githubusercontent.com/61356329/172699695-25b65caf-b23e-4143-b36c-c2ab978c44dd.png)
 
 Back on the "Create your own" screen, click "Add" on the "Then That" block.
 Search and select "email" (not "email digest")
+
 ![image](https://user-images.githubusercontent.com/61356329/172700060-3303b100-be04-443f-947f-469b5bdb20f9.png)
 
 Select "Send me an email"
+
 ![image](https://user-images.githubusercontent.com/61356329/172700664-8e2ba6e5-b1e3-4bc6-97be-4e1c3d6b55b8.png)
 
 Edit the email template to your liking
+
 ![image](https://user-images.githubusercontent.com/61356329/172700596-45930e41-ea7a-4367-baef-17cc76324c07.png)
 
 Back on the "Create your own" screen, click "Continue"
 On the "Review and finish" screen, enter a name for your applet and click "Finish"
 Go to this URL: https://ifttt.com/maker_webhooks and click "Documentation"
 At the top of the page, copy the key given after "Your key is:" (You will need this key in your code later).
+
 ![image](https://user-images.githubusercontent.com/61356329/172702089-7bd57547-323c-4954-8c2e-9ce1ab3703ac.png)
 
 
